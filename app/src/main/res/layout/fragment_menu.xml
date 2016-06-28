@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="es.upsa.mimo.espressoexamples.fragments.MenuFragment">
+
+    <Button
+        android:id="@+id/recycler_example_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView example"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/enter_example_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fill form example"
+        android:layout_below="@+id/recycler_example_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/dialog_example_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alert dialog example"
+        android:layout_below="@+id/enter_example_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/data_picker_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data picker example"
+        android:layout_below="@+id/dialog_example_activity"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/view_pager_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View pager example"
+        android:layout_below="@+id/data_picker_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/change_example_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simple change activity example"
+        android:layout_below="@+id/view_pager_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

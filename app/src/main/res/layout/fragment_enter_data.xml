@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="es.upsa.mimo.espressoexamples.fragments.EnterDataFragment">
+
+    <EditText
+        android:id="@+id/name_edittext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_enter_name" />
+
+    <EditText
+        android:id="@+id/surnames_edittext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/surnames_enter_name"
+        android:layout_below="@id/name_edittext"/>
+
+    <TextView
+        android:id="@+id/error_text_data"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="Error fill data"
+        android:textColor="#A00"
+        android:layout_below="@id/surnames_edittext"/>
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/go_enter_name"
+        android:layout_below="@id/error_text_data"/>
+
+</RelativeLayout>

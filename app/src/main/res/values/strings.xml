@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">EspressoExamples</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="extraTitle">title</string>
+    <string name="name_enter_name">Name</string>
+    <string name="surnames_enter_name">Enter surnames</string>
+    <string name="go_enter_name">Go</string>
+    <string name="dialog_title">Dialog Color</string>
+    <string name="dialog_message">It is a alert dialog</string>
+    <string name="dialog_cancel">cancel</string>
+    <string name="dialog_ok">ok</string>
+    <string name="time_data_picker">timeDataPicker</string>
+    <string name="red">red_pager</string>
+    <string name="blue">blue_pager</string>
+</resources>
