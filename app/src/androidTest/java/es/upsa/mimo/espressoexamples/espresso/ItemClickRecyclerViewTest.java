@@ -3,7 +3,6 @@ package es.upsa.mimo.espressoexamples.espresso;
 import android.support.test.espresso.contrib.RecyclerViewActions;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.test.ActivityInstrumentationTestCase2;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -12,10 +11,14 @@ import org.junit.runner.RunWith;
 import es.upsa.mimo.espressoexamples.R;
 import es.upsa.mimo.espressoexamples.activities.MainActivity;
 
+import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.Espresso.pressBack;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static es.upsa.mimo.espressoexamples.espresso.matches.Matchers.withTeamDriver;
+import static es.upsa.mimo.espressoexamples.espresso.matches.Matchers.withTeamName;
+import static org.hamcrest.CoreMatchers.allOf;
 
 /**
  * Created by sergiogarcia on 26/6/16.
@@ -51,5 +54,4 @@ public class ItemClickRecyclerViewTest{
         onView(withId(R.id.recyclerView_fragment)).perform(RecyclerViewActions.actionOnItemAtPosition(1, click()));
         pressBack();
     }
-
 }

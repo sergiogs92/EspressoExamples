@@ -23,6 +23,7 @@ public class MenuFragment extends Fragment {
     private Button exampleDialogButton;
     private Button exampleDataPickerButton;
     private Button exampleViewPagerButton;
+    private Button exampleAdapterViewButton;
     private ViewGroup containerView;
 
     @Override
@@ -41,12 +42,14 @@ public class MenuFragment extends Fragment {
         exampleDialogButton = (Button) view.findViewById(R.id.dialog_example_activity);
         exampleDataPickerButton = (Button) view.findViewById(R.id.data_picker_button);
         exampleViewPagerButton =  (Button) view.findViewById(R.id.view_pager_button);
+        exampleAdapterViewButton = (Button) view.findViewById(R.id.adapter_view_list_button);
         setUpRecyclerButton();
         setUpEnterDataButton();
         setUpActivityButton();
         setUpDialogButton();
         setUpDataPickerButton();
         setUpViewPagerButton();
+        setUpAdapterViewButton();
     }
 
     private void setUpActivityButton() {
@@ -102,6 +105,16 @@ public class MenuFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent =  new Intent(getContext(), ViewPagerActivity.class);
                 startActivity(intent);
+            }
+        });
+    }
+
+
+    private void setUpAdapterViewButton() {
+        exampleAdapterViewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setUpNewFragment(new AdapterViewFragment());
             }
         });
     }

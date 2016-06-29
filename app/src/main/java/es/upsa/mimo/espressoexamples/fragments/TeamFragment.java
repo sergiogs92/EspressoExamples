@@ -13,13 +13,13 @@ import android.view.ViewGroup;
 
 import es.upsa.mimo.espressoexamples.DatabaseF1;
 import es.upsa.mimo.espressoexamples.R;
-import es.upsa.mimo.espressoexamples.adapter.TeamAdapter;
+import es.upsa.mimo.espressoexamples.adapter.TeamRecyclerAdapter;
 
 public class TeamFragment extends Fragment implements View.OnClickListener  {
 
     private Parcelable scrollState;
     private ViewGroup containerView;
-    private TeamAdapter listAdapter;
+    private TeamRecyclerAdapter listAdapter;
     private RecyclerView recyclerView;
 
     @Override
@@ -34,7 +34,7 @@ public class TeamFragment extends Fragment implements View.OnClickListener  {
         super.onViewCreated(view, savedInstanceState);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_fragment);
 
-        listAdapter = new TeamAdapter(getContext());
+        listAdapter = new TeamRecyclerAdapter(getContext(), DatabaseF1.DATABASE_F1);
         listAdapter.setOnClickListener(this);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -45,11 +45,11 @@ public class TeamFragment extends Fragment implements View.OnClickListener  {
     @Override
     public void onClick(View v) {
         int positionClicked = recyclerView.getChildAdapterPosition(v);
-        TeamDetailFragment booksDetailFragment = TeamDetailFragment.newInstance(DatabaseF1.DATABASE_F1.get(positionClicked).name);
+        TeamDetailFragment teamDetailFragment = TeamDetailFragment.newInstance(DatabaseF1.DATABASE_F1.get(positionClicked).name);
         scrollState = recyclerView.getLayoutManager().onSaveInstanceState();
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         transaction.addToBackStack(null);
-        transaction.replace(containerView.getId(), booksDetailFragment).commit();
+        transaction.replace(containerView.getId(), teamDetailFragment).commit();
     }
 
     @Override

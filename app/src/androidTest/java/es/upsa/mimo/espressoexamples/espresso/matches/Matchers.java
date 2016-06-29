@@ -8,6 +8,8 @@ import android.view.View;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 
+import es.upsa.mimo.espressoexamples.model.Team;
+
 
 /**
  * Created by sergiogarcia on 27/06/16.
@@ -29,6 +31,40 @@ public class Matchers {
             @Override
             public void describeTo(Description description) {
                 description.appendText("with background color from id: " + backgroundColor);
+            }
+        };
+    }
+
+    /**
+     * Matches a Team with a specific name
+     */
+    public static Matcher<Object> withTeamName(final String teamName) {
+        return new BoundedMatcher<Object, Team>(Team.class) {
+            @Override
+            protected boolean matchesSafely(Team team) {
+                return teamName.equals(team.name);
+            }
+
+            @Override
+            public void describeTo(Description description) {
+                description.appendText("with name id: " + teamName);
+            }
+        };
+    }
+
+    /**
+     * Matches a Team with a specific driver
+     */
+    public static Matcher<Object> withTeamDriver(final String teamDriver) {
+        return new BoundedMatcher<Object, Team>(Team.class) {
+            @Override
+            protected boolean matchesSafely(Team team) {
+                return teamDriver.equals(team.driver);
+            }
+
+            @Override
+            public void describeTo(Description description) {
+                description.appendText("with driver id: " + teamDriver);
             }
         };
     }

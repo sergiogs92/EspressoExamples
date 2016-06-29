@@ -1,7 +1,7 @@
 package es.upsa.mimo.espressoexamples.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import es.upsa.mimo.espressoexamples.R;

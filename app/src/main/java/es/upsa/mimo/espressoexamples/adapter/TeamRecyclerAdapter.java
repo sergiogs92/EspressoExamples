@@ -7,20 +7,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import es.upsa.mimo.espressoexamples.DatabaseF1;
+import java.util.ArrayList;
+
 import es.upsa.mimo.espressoexamples.R;
 import es.upsa.mimo.espressoexamples.model.Team;
 
 /**
  * Created by sergiogarcia on 26/6/16.
  */
-public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ItemsViewHolder> implements View.OnClickListener {
+public class TeamRecyclerAdapter extends RecyclerView.Adapter<TeamRecyclerAdapter.ItemsViewHolder> implements View.OnClickListener{
 
     private Context context;
     private View.OnClickListener listener;
+    private ArrayList<Team> databaseF1;
 
-    public TeamAdapter(Context context) {
-        context = context;
+    public TeamRecyclerAdapter(Context context, ArrayList<Team> databaseF1) {
+        this.context = context;
+        this.databaseF1 = databaseF1;
     }
 
     public void setOnClickListener(View.OnClickListener listener) {
@@ -35,7 +38,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ItemsViewHolde
     }
 
     @Override
-    public TeamAdapter.ItemsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public TeamRecyclerAdapter.ItemsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View viewItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_team, parent, false);
         viewItem.setOnClickListener(this);
 
@@ -45,13 +48,8 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ItemsViewHolde
     }
 
     @Override
-    public void onBindViewHolder(TeamAdapter.ItemsViewHolder holder, int position) {
-        holder.bindItem(DatabaseF1.DATABASE_F1.get(position));
-    }
-
-    @Override
-    public int getItemCount() {
-        return DatabaseF1.DATABASE_F1.size();
+    public void onBindViewHolder(TeamRecyclerAdapter.ItemsViewHolder holder, int position) {
+        holder.bindItem(databaseF1.get(position));
     }
 
     public static class ItemsViewHolder extends RecyclerView.ViewHolder {
@@ -70,4 +68,10 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ItemsViewHolde
             driverTextView.setText(team.driver);
         }
     }
+
+    @Override
+    public int getItemCount() {
+        return databaseF1.size();
+    }
+
 }
