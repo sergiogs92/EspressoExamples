@@ -10,6 +10,10 @@
 
 >**-ViewPager**
 
+>**-AdapterView**
+
+>**-Orientation: portrait, landscape**
+
 >**-Form..**
 
-**And includes a example to custom matcher.**
+**And includes various examples to custom matcher.**
