@@ -34,7 +34,7 @@ public class TeamFragment extends Fragment implements View.OnClickListener  {
         super.onViewCreated(view, savedInstanceState);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_fragment);
 
-        listAdapter = new TeamRecyclerAdapter(getContext(), DatabaseF1.DATABASE_F1);
+        listAdapter = new TeamRecyclerAdapter(DatabaseF1.DATABASE_F1);
         listAdapter.setOnClickListener(this);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

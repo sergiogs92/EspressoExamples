@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import es.upsa.mimo.espressoexamples.R;
 
-public class EnterDataFragment extends Fragment {
+public class DataFormFragment extends Fragment {
 
     private EditText nameEditText;
     private EditText surnamesEditText;
@@ -21,7 +21,7 @@ public class EnterDataFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_enter_data, container, false);
+        return inflater.inflate(R.layout.fragment_form_data, container, false);
     }
 
     @Override

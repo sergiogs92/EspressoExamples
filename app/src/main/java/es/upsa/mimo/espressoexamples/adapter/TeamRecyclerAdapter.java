@@ -17,12 +17,10 @@ import es.upsa.mimo.espressoexamples.model.Team;
  */
 public class TeamRecyclerAdapter extends RecyclerView.Adapter<TeamRecyclerAdapter.ItemsViewHolder> implements View.OnClickListener{
 
-    private Context context;
     private View.OnClickListener listener;
     private ArrayList<Team> databaseF1;
 
-    public TeamRecyclerAdapter(Context context, ArrayList<Team> databaseF1) {
-        this.context = context;
+    public TeamRecyclerAdapter(ArrayList<Team> databaseF1) {
         this.databaseF1 = databaseF1;
     }
 
@@ -42,7 +40,7 @@ public class TeamRecyclerAdapter extends RecyclerView.Adapter<TeamRecyclerAdapte
         View viewItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_team, parent, false);
         viewItem.setOnClickListener(this);
 
-        ItemsViewHolder viewHolder = new ItemsViewHolder(context, viewItem);
+        ItemsViewHolder viewHolder = new ItemsViewHolder(viewItem);
 
         return viewHolder;
     }
@@ -57,7 +55,7 @@ public class TeamRecyclerAdapter extends RecyclerView.Adapter<TeamRecyclerAdapte
         TextView titleTextView;
         TextView driverTextView;
 
-        public ItemsViewHolder(Context context, View itemView) {
+        public ItemsViewHolder(View itemView) {
             super(itemView);
             titleTextView = (TextView) itemView.findViewById(R.id.team_title);
             driverTextView = (TextView) itemView.findViewById(R.id.driver_title);

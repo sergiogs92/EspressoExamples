@@ -29,7 +29,7 @@ public class AdapterViewFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ;
+
         ListView list = (ListView) view.findViewById(R.id.adapter_view_list);
         list.setAdapter(new TeamListAdapter(getContext(), DatabaseF1.DATABASE_F1));
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {

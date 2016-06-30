@@ -67,7 +67,7 @@ public class MenuFragment extends Fragment {
         exampleDataButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setUpNewFragment(new EnterDataFragment());
+                setUpNewFragment(new DataFormFragment());
             }
         });
     }
