@@ -11,14 +11,10 @@ import org.junit.runner.RunWith;
 import es.upsa.mimo.espressoexamples.R;
 import es.upsa.mimo.espressoexamples.activities.MainActivity;
 
-import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.Espresso.pressBack;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static es.upsa.mimo.espressoexamples.espresso.matches.Matchers.withTeamDriver;
-import static es.upsa.mimo.espressoexamples.espresso.matches.Matchers.withTeamName;
-import static org.hamcrest.CoreMatchers.allOf;
 
 /**
  * Created by sergiogarcia on 26/6/16.

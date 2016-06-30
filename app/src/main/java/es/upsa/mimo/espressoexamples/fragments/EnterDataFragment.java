@@ -27,11 +27,11 @@ public class EnterDataFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        nameEditText = (EditText) view.findViewById(R.id.name_edittext);
-        surnamesEditText = (EditText) view.findViewById(R.id.surnames_edittext);
-        errorTextView = (TextView) view.findViewById(R.id.error_text_data);
-        goButton = (Button) view.findViewById(R.id.next_button);
-        setUpGoButton();
+            nameEditText = (EditText) view.findViewById(R.id.name_edittext);
+            surnamesEditText = (EditText) view.findViewById(R.id.surnames_edittext);
+            errorTextView = (TextView) view.findViewById(R.id.error_text_data);
+            goButton = (Button) view.findViewById(R.id.next_button);
+            setUpGoButton();
     }
 
     private void setUpGoButton() {
