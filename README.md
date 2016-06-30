@@ -1,6 +1,6 @@
 # EspressoExamples
 
-**This app has specific examples of Espresso framework:**
+**This app has specific test examples of Espresso framework:**
 
 >**-RecyclerView**
 
@@ -16,4 +16,4 @@
 
 >**-Form..**
 
-**And includes various examples to custom matcher.**
+**And includes various examples to custom matcher and also include a view action.**
